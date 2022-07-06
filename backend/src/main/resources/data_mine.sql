@@ -1,8 +1,8 @@
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA', 'RUA XXX', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_bacon.jpg', 1);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('APTO',   'RUA YYY', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_moda.jpg', 2);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('SOBRADO','AVENIDA XYZ', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg', 3);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA OPERARIO', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/risoto_carne.jpg', 1);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA DAS CRINAS', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/risoto_funghi.jpg', 1);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('APTO',   'AVENIDA SAO JOAO', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/macarrao_espaguete.jpg', 2);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('SOBRADO','RUA DA CARIOCA', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/macarrao_fusili.jpg', 3);
-INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA DAS PETUNIAS', 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/macarrao_penne.jpg', 1);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA', 'RUA XXX', 'http://localhost:8080/casa0.jpg', 0);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('APTO',   'RUA YYY', 'http://localhost:8080/apto1.jpg', 1);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('SOBRADO','AVENIDA XYZ', 'http://localhost:8080/sobrado2.jpg', 2);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA OPERARIO', 'http://localhost:8080/casa0.jpg', 0);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA DAS CRINAS', 'http://localhost:8080/casa0.jpg', 0);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('APTO',   'AVENIDA SAO JOAO', 'http://localhost:8080/apto1.jpg', 1);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('SOBRADO','RUA DA CARIOCA', 'http://localhost:8080/sobrado2.jpg', 2);
+INSERT INTO tb_imovel (descricao, endereco, imageuri, tipo) VALUES ('CASA',   'RUA DAS PETUNIAS', 'http://localhost:8080/casa0.jpg', 0);

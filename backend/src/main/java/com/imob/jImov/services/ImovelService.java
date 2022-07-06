@@ -3,6 +3,8 @@ package com.imob.jImov.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.imob.jImov.dto.ImovelDTO;
 import com.imob.jImov.entities.Imovel;
 import com.imob.jImov.repositories.ImovelRepository;
+import com.imob.jImov.resources.exceptions.ResourceNotFoundException;
 
 @Service
 public class ImovelService {
@@ -30,5 +33,27 @@ public class ImovelService {
     	return new ImovelDTO(imovel);
     	
     }
+	
+	@Transactional
+    public ImovelDTO setImovel(Long id, ImovelDTO dto) {    	
+    	
+    	try {
+    		Imovel entity = repository.getOne(id);
+			updateData(entity, dto);
+			entity = repository.save(entity);
+			return new ImovelDTO(entity);
+		} catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
+    	
+    	
+    }
+	
+	private void updateData(Imovel entity, ImovelDTO dto) {
+		entity.setDescricao(dto.getDescricao());
+		entity.setEndereco(dto.getEndereco()); 
+		entity.setImageUri(dto.getImageuri());
+		entity.setTipo(dto.getTipo());
+	}
 	
 }

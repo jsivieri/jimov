@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +28,12 @@ public class ImovelController {
 	public ResponseEntity<List<ImovelDTO>> findAll() {
 		List<ImovelDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
+	}
+	
+	@GetMapping(value = "/{id}")	
+	public ResponseEntity<ImovelDTO> findById(@PathVariable Long id) {
+		ImovelDTO imovel = service.findById(id);
+		return ResponseEntity.ok().body(imovel);
 	}
 
 	@PostMapping

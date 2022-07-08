@@ -6,8 +6,10 @@ import java.util.stream.Collectors;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.imob.jImov.dto.ImovelDTO;
 import com.imob.jImov.entities.Imovel;
@@ -25,6 +27,12 @@ public class ImovelService {
     	List<Imovel> list = repository.findAll();
     	return list.stream().map(x -> new ImovelDTO(x)).collect(Collectors.toList());
     }
+	
+	@Transactional(readOnly = true)
+	public ImovelDTO findById(Long id) {
+		Imovel entity = repository.getOne(id);
+		return new ImovelDTO(entity);
+	}
 	
 	@Transactional
     public ImovelDTO insert(ImovelDTO dto) {

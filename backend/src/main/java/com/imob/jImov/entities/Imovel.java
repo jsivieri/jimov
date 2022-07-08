@@ -8,10 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_imovel")
+@Table(name = "tb_imovel")
 public class Imovel implements Serializable {
-		
-	
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +19,9 @@ public class Imovel implements Serializable {
 	private TipoImovel tipo;
 	private String endereco;
 	private String imageuri;
-	
-	public Imovel() {
-		
+
+	public Imovel() { 
+
 	}
 
 	public Imovel(Long id, String descricao, TipoImovel tipo, String endereco, String imageuri) {
@@ -64,7 +63,7 @@ public class Imovel implements Serializable {
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
-	}	
+	}
 
 	public String getImageUri() {
 		return imageuri;
@@ -98,6 +97,5 @@ public class Imovel implements Serializable {
 			return false;
 		return true;
 	}
-	
 
 }
